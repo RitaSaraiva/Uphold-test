@@ -35,10 +35,12 @@ const StyledMainScreen = styled.div`
     gap: 10px;
     background-color: #f5f9fc;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
-    width: 35%;
+    width: 25%;
     justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
 
   .input {
@@ -46,10 +48,19 @@ const StyledMainScreen = styled.div`
     background-color: transparent;
     font-size: 24px;
     width: 75%;
+
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    :focus {
+      outline: none;
+    }
   }
 
   .resultContainer {
-    width: 35%;
+    width: 25%;
   }
 
   .individualResult {
@@ -58,13 +69,42 @@ const StyledMainScreen = styled.div`
     gap: 10px;
   }
 
-  .tickerAsk {
-    width: 50px;
-  }
-
   .explanationText {
     color: #8f9eac;
     font-size: 12px;
+  }
+
+  .valueContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 70%;
+    overflow: hidden;
+  }
+
+  .exchangeRateText {
+    color: #8f9eac;
+    font-size: 10px;
+    margin: 0px;
+  }
+  .resultText {
+    font-weight: 600;
+    margin: 0px;
+    color: #3e4c5d;
+  }
+
+  .resultsCurrency {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 20%;
+  }
+
+  .currencyImage {
+    width: 20px;
+    height: 20px;
   }
 `;
 export default StyledMainScreen;
