@@ -7,7 +7,6 @@ import CNY from "../assets/CNY.png";
 import ETH from "../assets/ETH.png";
 import EUR from "../assets/EUR.png";
 import GBP from "../assets/GBP.png";
-import logo from "../assets/logo.svg";
 import USD from "../assets/USD.png";
 import DropDown from "../components/dropDown/dropDown.tsx";
 import { useTickerStorageStore } from "../storage/useTickerStorage.tsx";
@@ -61,7 +60,6 @@ const MainScreen = () => {
   return (
     <StyledMainScreen>
       <div className="header">
-        <img src={logo} alt="logo" />
         <h1 className="title">Currency Converter</h1>
         <p className="description">
           Receive competitive and transparent pricing with no hidden spreads.
