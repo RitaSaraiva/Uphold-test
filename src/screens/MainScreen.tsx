@@ -1,5 +1,6 @@
 import SDK from "@uphold/uphold-sdk-javascript";
 import React, { useEffect, useState } from "react";
+import { TailSpin } from "react-loader-spinner";
 import BAT from "../assets/BAT.png";
 import BCH from "../assets/BCH.png";
 import BTC from "../assets/BTC.png";
@@ -17,10 +18,11 @@ import { useTickerStorageStore } from "../storage/useTickerStorage.tsx";
 import StyledMainScreen from "./MainScreen.styles.tsx";
 
 const MainScreen = () => {
-  const { selectedTicker } = useTickerStorageStore();
+  const { selectedTicker, setSelectedTicker } = useTickerStorageStore();
   const [ticker, setTicker] = useState<any>(null);
   const [inputValue, setInputValue] = useState<number>(0);
   const [filteredTicker, setFilteredTicker] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
   const allowedCurrencies = [
     "USD",
     "EUR",
@@ -44,11 +46,14 @@ const MainScreen = () => {
 
   const fetchTicker = async () => {
     if (!selectedTicker) return;
+    setLoading(true);
     try {
       const response = await sdk.getTicker(selectedTicker);
       setTicker(response);
     } catch (error) {
       console.error("Error fetching data:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -83,7 +88,19 @@ const MainScreen = () => {
         />
         <DropDown filteredTicker={filteredTicker} />
       </div>
-      {inputValue > 0 && (
+      {loading && (
+        <div>
+          <TailSpin
+            visible={true}
+            height="80"
+            width="80"
+            color="#49cc68"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+          />
+        </div>
+      )}
+      {inputValue > 0 && !loading && (
         <div className="resultContainer">
           {filteredTicker?.map((ticker, index) => (
             <div key={index} className="individualResult">
