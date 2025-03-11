@@ -1,11 +1,17 @@
 import styled from "@emotion/styled";
 
 const StyledFooter = styled.div`
-  width: 75%;
-  border-top: 1px solid #f3f6f9;
+  width: 100%;
   padding-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   .footerContainer {
+    border-top: 1px solid #f3f6f9;
+    width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -60,6 +66,7 @@ const StyledFooter = styled.div`
     color: #8f9eac;
     justify-content: space-between;
     font-size: 10px;
+    width: 75%;
   }
 
   .rightsReservedContainer {

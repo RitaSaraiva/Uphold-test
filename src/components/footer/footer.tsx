@@ -7,7 +7,7 @@ import StyledFooter from "./footer.styles.tsx";
 
 const Footer = () => {
   return (
-    <StyledFooter className="Footer">
+    <StyledFooter>
       <div className="footerContainer">
         <img src={logo} alt="logo" className="logo" />
 
