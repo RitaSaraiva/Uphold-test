@@ -3,11 +3,15 @@ import React, { useEffect, useState } from "react";
 import BAT from "../assets/BAT.png";
 import BCH from "../assets/BCH.png";
 import BTC from "../assets/BTC.png";
+import CAD from "../assets/CAD.png";
 import CNY from "../assets/CNY.png";
 import ETH from "../assets/ETH.png";
 import EUR from "../assets/EUR.png";
 import GBP from "../assets/GBP.png";
+import MXN from "../assets/MXN.png";
+import NOK from "../assets/NOK.png";
 import USD from "../assets/USD.png";
+import XAU from "../assets/XAU.png";
 import DropDown from "../components/dropDown/dropDown.tsx";
 import { useTickerStorageStore } from "../storage/useTickerStorage.tsx";
 import StyledMainScreen from "./MainScreen.styles.tsx";
@@ -26,6 +30,10 @@ const MainScreen = () => {
     "CNY",
     "ETH",
     "GBT",
+    "NOK",
+    "MXN",
+    "CAD",
+    "XAU",
   ];
 
   const sdk = new SDK({
@@ -103,6 +111,14 @@ const MainScreen = () => {
                       ? CNY
                       : ticker.currency === "ETH"
                       ? ETH
+                      : ticker.currency === "NOK"
+                      ? NOK
+                      : ticker.currency === "MXN"
+                      ? MXN
+                      : ticker.currency === "CAD"
+                      ? CAD
+                      : ticker.currency === "XAU"
+                      ? XAU
                       : GBP
                   }
                   alt="currency"

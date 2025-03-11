@@ -7,11 +7,15 @@ import StyledMainScreen from "./dropDown.styles.tsx";
 import BAT from "../../assets/BAT.png";
 import BCH from "../../assets/BCH.png";
 import BTC from "../../assets/BTC.png";
+import CAD from "../../assets/CAD.png";
 import CNY from "../../assets/CNY.png";
 import ETH from "../../assets/ETH.png";
 import EUR from "../../assets/EUR.png";
 import GBP from "../../assets/GBP.png";
+import MXN from "../../assets/MXN.png";
+import NOK from "../../assets/NOK.png";
 import USD from "../../assets/USD.png";
+import XAU from "../../assets/XAU.png";
 
 type DropDownProps = {
   filteredTicker: any;
@@ -44,6 +48,14 @@ const DropDown = ({ filteredTicker }: DropDownProps) => {
                 ? CNY
                 : selectedTicker === "ETH"
                 ? ETH
+                : selectedTicker === "NOK"
+                ? NOK
+                : selectedTicker === "MXN"
+                ? MXN
+                : selectedTicker === "CAD"
+                ? CAD
+                : selectedTicker === "XAU"
+                ? XAU
                 : GBP
             }
             alt="currency"
@@ -82,6 +94,14 @@ const DropDown = ({ filteredTicker }: DropDownProps) => {
                       ? CNY
                       : ticker.currency === "ETH"
                       ? ETH
+                      : ticker.currency === "NOK"
+                      ? NOK
+                      : ticker.currency === "MXN"
+                      ? MXN
+                      : ticker.currency === "CAD"
+                      ? CAD
+                      : ticker.currency === "XAU"
+                      ? XAU
                       : GBP
                   }
                   alt="currency"

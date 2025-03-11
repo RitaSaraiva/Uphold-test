@@ -7,65 +7,65 @@ import StyledFooter from "./footer.styles.tsx";
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <StyledFooter className="Footer">
       <div className="footerContainer">
         <img src={logo} alt="logo" className="logo" />
 
         <div className="lowerButtonContainer">
           <div className="lowerButtonsColumn">
-            <p>Products</p>
+            <p className="optionsTitleText">Products</p>
             <div>
-              <p>Consumers</p>
-              <p>Business</p>
-              <p>Partners</p>
+              <p className="optionsText">Consumers</p>
+              <p className="optionsText">Business</p>
+              <p className="optionsText">Partners</p>
             </div>
           </div>
 
           <div className="lowerButtonsColumn">
-            <p>Company</p>
+            <p className="optionsTitleText">Company</p>
             <div>
-              <p>About</p>
-              <p>Carrers</p>
-              <p>Press</p>
-              <p>Blog</p>
+              <p className="optionsText">About</p>
+              <p className="optionsText">Carrers</p>
+              <p className="optionsText">Press</p>
+              <p className="optionsText">Blog</p>
             </div>
           </div>
 
           <div className="lowerButtonsColumn">
-            <p>Help</p>
+            <p className="optionsTitleText">Help</p>
             <div>
-              <p>FAQ & Support</p>
-              <p>Platform Status</p>
-              <p>Platform Status</p>
-              <p>Pricing</p>
-              <p>Legal</p>
+              <p className="optionsText">FAQ & Support</p>
+              <p className="optionsText">Platform Status</p>
+              <p className="optionsText">Platform Status</p>
+              <p className="optionsText">Pricing</p>
+              <p className="optionsText">Legal</p>
             </div>
           </div>
 
           <div className="lowerButtonsColumn">
-            <p>Social</p>
+            <p className="optionsTitleText">Social</p>
             <div>
-              <p>Facebook</p>
-              <p>Twitter</p>
-              <p>Instagram</p>
-              <p>Linkedin</p>
+              <p className="optionsText">Facebook</p>
+              <p className="optionsText">Twitter</p>
+              <p className="optionsText">Instagram</p>
+              <p className="optionsText">Linkedin</p>
             </div>
           </div>
         </div>
         <img src={appstore} alt="appstore" className="appstore" />
         <img src={playstore} alt="playstore" className="playstore" />
       </div>
-      <div>
+      <div className="legalInfoContainer">
         <div>
-          <p>
+          <p className="legalText">
             Uphold Europe Limited, Reg No. 09281410, Registered Office:
             Interchange Triangle, Chalk Farm Road, London, England, NW184B
           </p>
-          <div>
-            <p>Uphold, Inc. 2018. All rights Reserved.</p>
-            <p>Agreements</p>
-            <p>Privacy & Data Policy</p>
-            <p>Cookie Policy</p>
+          <div className="rightsReservedContainer">
+            <p className="legalText">Uphold, Inc. 2018. All rights Reserved.</p>
+            <p className="legalInfo">Agreements</p>
+            <p className="legalInfo">Privacy & Data Policy</p>
+            <p className="legalInfo">Cookie Policy</p>
           </div>
         </div>
         <img src={qrCode} alt="qrCode" className="qrCode" />
