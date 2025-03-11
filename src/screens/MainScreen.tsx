@@ -18,50 +18,49 @@ import { useTickerStorageStore } from "../storage/useTickerStorage.tsx";
 import StyledMainScreen from "./MainScreen.styles.tsx";
 
 const MainScreen = () => {
-  const { selectedTicker, setSelectedTicker } = useTickerStorageStore();
+  const { selectedTicker } = useTickerStorageStore();
   const [ticker, setTicker] = useState<any>(null);
   const [inputValue, setInputValue] = useState<number>(0);
   const [filteredTicker, setFilteredTicker] = useState<any>([]);
   const [loading, setLoading] = useState(false);
-  const allowedCurrencies = [
-    "USD",
-    "EUR",
-    "BAT",
-    "BTC",
-    "BCH",
-    "CNY",
-    "ETH",
-    "GBT",
-    "NOK",
-    "MXN",
-    "CAD",
-    "XAU",
-  ];
-
-  const sdk = new SDK({
-    baseUrl: "http://api-sandbox.uphold.com",
-    clientId: "foo",
-    clientSecret: "bar",
-  });
-
-  const fetchTicker = async () => {
-    if (!selectedTicker) return;
-    setLoading(true);
-    try {
-      const response = await sdk.getTicker(selectedTicker);
-      setTicker(response);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
+    const sdk = new SDK({
+      baseUrl: "http://api-sandbox.uphold.com",
+      clientId: "foo",
+      clientSecret: "bar",
+    });
+
+    const fetchTicker = async () => {
+      if (!selectedTicker) return;
+      setLoading(true);
+      try {
+        const response = await sdk.getTicker(selectedTicker);
+        setTicker(response);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
     fetchTicker();
   }, [selectedTicker]);
 
   useEffect(() => {
+    const allowedCurrencies = [
+      "USD",
+      "EUR",
+      "BAT",
+      "BTC",
+      "BCH",
+      "CNY",
+      "ETH",
+      "GBT",
+      "NOK",
+      "MXN",
+      "CAD",
+      "XAU",
+    ];
     const filteredTicker = ticker?.filter(
       (item) =>
         allowedCurrencies.includes(item.currency) &&
