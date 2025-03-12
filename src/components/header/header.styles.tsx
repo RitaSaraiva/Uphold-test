@@ -15,6 +15,7 @@ const StyledHeader = styled.div`
     background-color: #49cc68;
     border-radius: 20px;
     padding: 5px 30px 5px 30px;
+    cursor: pointer;
   }
 
   .logo {
@@ -28,6 +29,10 @@ const StyledHeader = styled.div`
     gap: 20px;
     align-items: center;
     color: #8f9eac;
+  }
+
+  .navButtons {
+    cursor: pointer;
   }
 `;
 export default StyledHeader;

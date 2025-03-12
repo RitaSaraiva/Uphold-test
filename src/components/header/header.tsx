@@ -7,9 +7,9 @@ const Header = () => {
     <StyledHeader>
       <div className="headerContainer">
         <div className="navContainer">
-          <p>Personal</p>
-          <p>Business</p>
-          <p>Partners</p>
+          <p className="navButtons">Personal</p>
+          <p className="navButtons">Business</p>
+          <p className="navButtons">Partners</p>
         </div>
         <img src={logo} alt="logo" className="logo" />
         <div className="loginButtonStyle">Log In</div>

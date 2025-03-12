@@ -24,6 +24,15 @@ const StyledFooter = styled.div`
 
   .appstore {
     margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .moreInfoButtons {
+    cursor: pointer;
+  }
+
+  .playstore {
+    cursor: pointer;
   }
 
   .lowerButtonContainer {
@@ -83,6 +92,7 @@ const StyledFooter = styled.div`
   .legalInfo {
     margin: 5px;
     border-bottom: 1px solid #49cc68;
+    cursor: pointer;
   }
 `;
 export default StyledFooter;

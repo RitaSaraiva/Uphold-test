@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="lowerButtonContainer">
           <div className="lowerButtonsColumn">
             <p className="optionsTitleText">Products</p>
-            <div>
+            <div className="moreInfoButtons">
               <p className="optionsText">Consumers</p>
               <p className="optionsText">Business</p>
               <p className="optionsText">Partners</p>
@@ -23,7 +23,7 @@ const Footer = () => {
 
           <div className="lowerButtonsColumn">
             <p className="optionsTitleText">Company</p>
-            <div>
+            <div className="moreInfoButtons">
               <p className="optionsText">About</p>
               <p className="optionsText">Carrers</p>
               <p className="optionsText">Press</p>
@@ -33,7 +33,7 @@ const Footer = () => {
 
           <div className="lowerButtonsColumn">
             <p className="optionsTitleText">Help</p>
-            <div>
+            <div className="moreInfoButtons">
               <p className="optionsText">FAQ & Support</p>
               <p className="optionsText">Platform Status</p>
               <p className="optionsText">Platform Status</p>
@@ -44,7 +44,7 @@ const Footer = () => {
 
           <div className="lowerButtonsColumn">
             <p className="optionsTitleText">Social</p>
-            <div>
+            <div className="moreInfoButtons">
               <p className="optionsText">Facebook</p>
               <p className="optionsText">Twitter</p>
               <p className="optionsText">Instagram</p>
