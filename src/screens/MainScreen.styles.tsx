@@ -28,6 +28,7 @@ const StyledMainScreen = styled.div`
     text-align: center;
     width: 20%;
     color: #8f9eac;
+    min-width: 200px;
   }
 
   .inputContainer {
@@ -40,6 +41,7 @@ const StyledMainScreen = styled.div`
     justify-content: space-between;
     margin-bottom: 20px;
     margin-top: 30px;
+    min-width: 200px;
   }
 
   .input {
@@ -60,6 +62,7 @@ const StyledMainScreen = styled.div`
 
   .resultContainer {
     width: 25%;
+    min-width: 200px;
   }
 
   .individualResult {
